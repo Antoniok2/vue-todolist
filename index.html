@@ -19,12 +19,15 @@
                     <input v-model="newTask.text" type="text" placeholder="inserisci un task">
                     <button @click="addTask">Aggiungi task</button>
                 </div>
-                <div class="task_list">
+                <div class="end_task" v-if="tasks.length === 0">Sei riuscito a portare a termine tutto.</div>
+                <div v-else class="task_list">
                         <ul>
                             <li v-for="task, i in tasks" :key="i">
-                                {{task.text}}
+                                <span :class="{'done': task.done}">
+                                    {{task.text}}
+                                </span>
                                 <span @click="removeTask(i)"><i class="far fa-trash-alt"></i></span>
-                                <span><i class="far fa-check-circle"></i></span>              
+                                <span @click="addClass(i)"><i class="far fa-check-circle"></i></span>              
                             </li>
                         </ul>
                 </div>

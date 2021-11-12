@@ -9,33 +9,32 @@ var app = new Vue(
         data: {
             newTask: {
                 text: "",
-                done: "false"
+                done: false
             },
-
             tasks: [
                 {
                     text: 'Avviare lezione in classe',
-                    done: 'true'
+                    done: false
                 },
                 {
                     text: 'Pranzare',
-                    done: 'true'
+                    done: false
                 },
                 {
                     text: 'Fare sercizio assegnato',
-                    done: 'false'
+                    done: false
                 },
                 {
                     text:'Andare a lavorare',
-                    done: 'true'
+                    done: false
                 },
                 {
                     text: 'cenare',
-                    done: 'false'
+                    done: false
                 },
                 {
                     text: 'dormire',
-                    done: 'true'
+                    done: false
                 }
             ]
         },
@@ -50,6 +49,13 @@ var app = new Vue(
                     done: "false"
                 }
             },
+            addClass(){
+                if(this.tasks.done === false) {
+                    this.tasks.done = true
+                }
+            }
+            
+            
         },
 
     }
