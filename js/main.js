@@ -46,7 +46,7 @@ var app = new Vue(
                 this.tasks.push(this.newTask);
                 this.newTask = {
                     text: "",
-                    done: "false"
+                    done: ""
                 }
             },
         },

@@ -16,7 +16,7 @@
             <div id="todolist_app">
                 <h1>Todo List App</h1>
                 <div class="add_task">
-                    <input v-model="newTask.text" type="text" placeholder="inserisci un task">
+                    <input @keyup.enter="addTask()" v-model="newTask.text" type="text" placeholder="inserisci un task">
                     <button @click="addTask">Aggiungi task</button>
                 </div>
                 <div class="end_task" v-if="tasks.length === 0">Sei riuscito a portare a termine tutto.</div>
@@ -35,7 +35,6 @@
         </div>
     </div>
     
-
     <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
     <script src="js/main.js"></script>
 </body>
