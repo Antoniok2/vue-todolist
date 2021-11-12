@@ -7,6 +7,11 @@ var app = new Vue(
     {
         el: "#myapp",
         data: {
+            newTask: {
+                text: "",
+                done: "false"
+            },
+
             tasks: [
                 {
                     text: 'Avviare lezione in classe',
@@ -37,8 +42,15 @@ var app = new Vue(
         methods: {
             removeTask(index){
                 this.tasks.splice(index,1)
-            }
-        }
+            },
+            addTask(){
+                this.tasks.push(this.newTask);
+                this.newTask = {
+                    text: "",
+                    done: "false"
+                }
+            },
+        },
 
     }
 )

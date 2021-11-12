@@ -16,14 +16,15 @@
             <div id="todolist_app">
                 <h1>Todo List App</h1>
                 <div class="add_task">
-                    <input type="text" placeholder="inserisci un task">
-                    <button>Aggiungi task</button>
+                    <input v-model="newTask.text" type="text" placeholder="inserisci un task">
+                    <button @click="addTask">Aggiungi task</button>
                 </div>
                 <div class="task_list">
                         <ul>
                             <li v-for="task, i in tasks" :key="i">
                                 {{task.text}}
-                                <span @click="removeTask(i)"><i class="far fa-trash-alt"></i></span>              
+                                <span @click="removeTask(i)"><i class="far fa-trash-alt"></i></span>
+                                <span><i class="far fa-check-circle"></i></span>              
                             </li>
                         </ul>
                 </div>
