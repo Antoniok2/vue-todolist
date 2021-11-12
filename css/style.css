@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+#todolist_app {
+    width: 800px;
+    height: 500px;
+    background-color: rgb(94, 122, 248);
+    border: 2px solid black;
+}
+
+#todolist_app h1 {
+    text-align: center;
+    border-bottom: 2px solid black;
+    color: white;
+}
+
+.add_task {
+    padding: 10px;
+    border-bottom: 2px solid black;
+    text-align: center;
+}
+
+.add_task input {
+    border-radius: 10px;
+    padding: 2px 10px;
+}
+
+.add_task button {
+    border-radius: 10px;
+    padding: 2px 10px;
+    background-color: rgb(42, 224, 42);
+}
+
+.task_list {
+    background-color: white;
+    height: 83%;
+}
+
+.task_list ul {
+    padding: 20px;
+    background-color: white;
+}
+
+.task_list li {
+    border-bottom: 1px solid black;
+    padding: 5px;
+    list-style: none;
+}
+
+
+
