@@ -49,14 +49,6 @@ var app = new Vue(
                     done: "false"
                 }
             },
-            addClass(){
-                if(this.tasks.done === false) {
-                    this.tasks.done = true
-                }
-            }
-            
-            
         },
-
     }
 )

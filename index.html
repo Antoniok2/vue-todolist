@@ -27,7 +27,7 @@
                                     {{task.text}}
                                 </span>
                                 <span @click="removeTask(i)"><i class="far fa-trash-alt"></i></span>
-                                <span @click="addClass(i)"><i class="far fa-check-circle"></i></span>              
+                                <span @click="task.done = !task.done"><i class="far fa-check-circle"></i></span>              
                             </li>
                         </ul>
                 </div>
